@@ -1,5 +1,5 @@
 ///**
-// * N1987 - ¾ËÆÄºª
+// * N1987
 // */
 //import java.util.Scanner;
 //
@@ -52,7 +52,7 @@
 
 
 /**
- * N1987 - ¾ËÆÄºª
+ * N1987
  */
 import java.util.Scanner;
 
