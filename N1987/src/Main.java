@@ -52,7 +52,7 @@
 
 
 /**
- * N1987
+ * N1987 - 알파벳
  */
 import java.util.Scanner;
 
