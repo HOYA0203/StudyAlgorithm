@@ -1,56 +1,3 @@
-///**
-// * N1987
-// */
-//import java.util.Scanner;
-//
-//public class Main {
-//
-//	static int[] dx = { 0, 1, 0, -1 };
-//	static int[] dy = { 1, 0, -1, 0 };
-//	static int R;
-//	static int C;
-//
-//	public static void main(String[] args) {
-//		Scanner sc = new Scanner(System.in);
-//
-//		R = sc.nextInt(); // y
-//		C = sc.nextInt(); // x
-//		String[][] arr = new String[R][C];
-//		String str = null;
-//		boolean[] visit = new boolean[26];
-//		sc.nextLine();
-//		for (int i = 0; i < R; i++) {
-//			str = sc.nextLine();
-//			for (int j = 0; j < C; j++) {
-//				 arr[i][j] = str.substring(j, 1 + j);
-////				 arr[i][j] = str.charAt(j);
-//			}
-//		}
-////		System.out.println();
-//		visit[arr[0][0].charAt(0) - 'A'] = true;
-//		System.out.println(check(0, 0, arr, visit));
-//	}
-//
-//	static int check(int x, int y, String[][] arr, boolean[] visit) {
-//		int result = 0;
-//		for (int i = 0; i < 4; i++) {
-//			int nx = x + dx[i];
-//			int ny = y + dy[i];
-//			if (nx >= 0 && nx < C && ny >= 0 && ny < R) {
-//				if (!visit[arr[ny][nx].charAt(0) - 'A']) {
-//					visit[arr[ny][nx].charAt(0) - 'A'] = true;
-//					int next = check(nx, ny, arr, visit);
-//					if (result < next)
-//						result = next;
-//					visit[arr[ny][nx].charAt(0) - 'A'] = false;
-//				}
-//			}
-//		}
-//		return result + 1;
-//	}
-//}
-
-
 /**
  * N1987 - 알파벳
  */
@@ -77,10 +24,10 @@ public class Main {
 			str = sc.nextLine();
 			for (int j = 0; j < C; j++) {
 				 arr[i][j] = str.substring(j, 1 + j);
-//				 arr[i][j] = str.charAt(j);
+				// arr[i][j] = str.charAt(j); // If use char for String
 			}
 		}
-//		System.out.println();
+
 		visit[arr[0][0].charAt(0) - 'A'] = true;
 		System.out.println(check(0, 0));
 	}
@@ -96,7 +43,7 @@ public class Main {
 					int next = check(nx, ny);
 					if (result < next)
 						result = next;
-					visit[arr[ny][nx].charAt(0) - 'A'] = false;
+					visit[arr[ny][nx].charAt(0) - 'A'] = false;	// @@
 				}
 			}
 		}
